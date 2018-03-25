@@ -14,7 +14,7 @@ variable "cidr_prefix" {
 }
 
 variable "cidr_subnet_mask" {
-  default = "16"
+  default     = "16"
   description = "Network subnet mask"
 }
 
