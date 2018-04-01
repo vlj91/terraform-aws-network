@@ -19,7 +19,8 @@ resource "aws_internet_gateway" "main" {
 }
 
 resource "aws_route_table" "main" {
-  vpc_id = "${aws_vpc.main.id}"
+  vpc_id     = "${aws_vpc.main.id}"
+  depends_on = ["aws_vpc.main"]
 
   route {
     cidr_block = "0.0.0.0/0"
